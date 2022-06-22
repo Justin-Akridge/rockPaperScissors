@@ -1,6 +1,8 @@
 const choices = ['rock','paper','scissors']
 function game(){
-  playRound();
+  for (let i=0; i<5; i++){
+		 playRound(); 
+	}	
 }
 function playRound(){
   const playerSelection = playerChoice()
@@ -11,6 +13,7 @@ function playRound(){
 
 
 function playerChoice(){
+  const prompt = require('prompt-sync')();
   let input = prompt("Type: rock, paper, or scissors")
   while(input== null){
     input= prompt("Type: rock, paper, or scissors")
@@ -49,3 +52,5 @@ function checkWinner(choiceP, choiceC){
   }
 }
 game();
+
+
